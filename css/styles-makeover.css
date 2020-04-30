@@ -1,0 +1,222 @@
+/** Attempting to use the SMACSS approach
+ * Also attempting to use BEM
+ *
+ * Any classes used by JavaScript will be prefixed with `js-`, but otherwise the class names are CSS specific
+ *
+ * `normalize.css` has been applied prior to any of the following CSS */
+
+
+/** Base Rules
+ *
+ *These are the styles of the main elements (body, input, button, ul, ol, etc.)
+ */
+
+:root {
+  /* Split Complementary */
+  --main-color--base: #fab907;
+  --secondary-color--light: #14c0fa;
+  --secondary-color--dark: #1788ad;
+  --tertiary-color--light: #5c14fa;
+  --tertiary-color--dark: #4617ad;
+
+  /* Double Split Complementary */
+  --main-color--light: #faeb14;
+  --main-color--dark: #fa8914;
+  --secondary-alt--light: #20c3fa;
+  --secondary-alt--dark: #6520fa;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-color--light);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+body::after {
+  background-image: url("../img/backgroundimg.png");
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.page {
+  min-height: 90vh;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  font-size: 0.9rem;
+  font-variation-settings: 'wght'900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  all: unset;
+  padding: 1em 3em;
+}
+
+footer {
+  background-color: var(--secondary-color--dark);
+  min-height: 10vh;
+}
+
+/** Layout Rules
+ *
+ * These are the styles for more global elements (header, footer, sidebar, etc.)
+ */
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 83.33%;
+}
+
+header {
+  background-color: var(--secondary-color--dark);
+  color: var(--main-color--light);
+  padding: 1em 0;
+}
+
+.nav__list {
+  all: unset;
+  display: flex;
+}
+
+.nav__list-item {
+  margin-left: 1em;
+}
+
+.hero {
+  align-items: flex-start;
+  display: flex;
+  margin: 2em auto;
+  padding: 2em 0;
+}
+
+.hero__copy {
+  background-color: var(--main-color--base);
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 1px #444, -1px -1px 8px 1px #444;
+  box-sizing: border-box;
+  padding: 1.5em 3em;
+  width: 48%;
+}
+
+.hero__img {
+  align-items: flex-end;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.hero__img--container {
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 1px #444, -1px -1px 8px 1px #444;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.hero__img--content {
+  display: block;
+  width: 100%;
+}
+
+.hero__img--container::after {
+  background-color: var(--main-color--base);
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.hero__img--byline {
+  margin: 0.5em 0;
+}
+
+/* Modules Rules
+ *
+ * These are styles for reusable groupings that can be used multiple times on a page
+ */
+
+
+
+/** State Rules
+ *
+ * These are styles for applying changes in state to previous items
+ */
+
+.logo__img {
+  background-color: var(--main-color--base);
+  border-radius: 10px;
+  display: block;
+  max-width: 200px;
+  width: 100%;
+}
+
+.hero__copy--title {
+  color: var(--tertiary-color--dark);
+  font-family: 'Lemonada', cursive;
+  font-variation-settings: 'wght'900;
+  line-height: 1;
+  margin: 0;
+}
+
+.hero__copy--text {
+  color: var(--tertiary-color--dark);
+  font-variation-settings: 'wght'500;
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+.copyright {
+  color: var(--tertiary-color--dark);
+  font-family: 'Lemonada', cursive;
+  font-size: 0.8rem;
+  font-variation-settings: 'wght'500;
+  margin: 2em auto;
+  text-shadow: 1px 1px 5px #12ade0, -1px -1px 5px #12ade0;
+  width: fit-content;
+}
+
+/* Theme Rules
+ *
+ * These are styles that might replace previous items due to a change in theme
+ */

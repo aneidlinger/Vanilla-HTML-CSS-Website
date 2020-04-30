@@ -1,43 +1,61 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
+
 <head>
-    <title>Doggos &amp; Kittehs</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kreon|Lato" rel="stylesheet">
-    <link rel="icon" href="img/backgroundimg.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <!--  <link href="css/styles.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/styles-makeover.css">
+  <!--  <link href="https://fonts.googleapis.com/css?family=Kreon|Lato" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@515&family=Quicksand:wght@515&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/backgroundimg.png" type="image/x-icon">
+  <title>Doggos &amp; Kittehs</title>
 </head>
+
 <body>
-    <div class="page">
-   <header>
-        <img src="img/dogkitlogo.png" alt="Doggos & Kittehs">
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="pushdown" href="#">Adopt</a>
-                <ul>
-                    <li><a href="dogs.html">Doggos</a></li>
-                    <li><a href="cats.html">Kittehs</a></li>
-                </ul>
-            </li>
-            <li><a href="donate.html">Donate/Volunteer</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="info">
-            <img src="img/pupkitplay72dpi.jpg" alt="Puppy and Kitten">
-            <h6>PixaBay</h6>
-            <h1>Welcome to Doggos &amp; Kittehs!</h1>
-            <p>Are you looking for a new doggo or kitteh to add to your family? 'Cause our doggos and kittehs are looking for their forever homes. All you need to do is stop on by and meet a few furry creatures face-to-face, add a dash of cuddles, a pinch of playtime, and you're sure to fall in love! As the newest part of your family, each critter will bring their own personality to add new love, laughter, and quirkiness to your home. Come see us today, and leave with the newest addition to your forever family! </p>
-            
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img class="logo__img" src="img/dogkitlogo.png" alt="Doggos & Kittehs">
         </div>
+        <nav>
+          <ul class="nav__list">
+            <li class="nav__list-item"><a class="nav__link" href="index.html">Home</a></li>
+            <li class="nav__list-item"><a class="nav__link" href="dogs.html">Doggos</a></li>
+            <li class="nav__list-item"><a class="nav__link" href="cats.html">Kittehs</a></li>
+            <li class="nav__list-item"><a class="nav__link" href="donate.html">Donate/Volunteer</a></li>
+            <li class="nav__list-item"><a class="nav__link" href="contact.html">Contact</a></li>
+            <li class="nav__list-item"><a class="nav__link" href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <main>
+      <div class="hero container">
+        <div class="hero__copy">
+          <h1 class="hero__copy--title">Welcome to Doggos &amp; Kittehs!</h1>
+          <p class="hero__copy--text">Are you looking for a new doggo or kitteh to add to your family? 'Cause our doggos and kittehs are looking for their forever homes. All you need to do is stop on by and meet a few furry creatures face-to-face, add a dash of cuddles, a pinch of playtime, and you're sure to fall in love! As the newest part of your family, each critter will bring their own personality to add new love, laughter, and quirkiness to your home. Come see us today, and leave with the newest addition to your forever family!</p>
+        </div>
+        <div class="hero__img">
+          <div class="hero__img--container">
+            <div class="hero__img--overlay">
+              <img class="hero__img--content" src="img/pupkitplay72dpi.jpg" alt="Puppy and Kitten">
+            </div>
+          </div>
+          <h6 class="hero__img--byline">PixaBay</h6>
+        </div>
+      </div>
     </main>
-    <footer>
-        <h3>Copyright &copy; 2017 Adam Neidlinger</h3>
-    </footer>
+  </div>
+
+  <footer>
+    <div class="container">
+      <h3 class="copyright">Copyright &copy; 2017 Adam Neidlinger</h3>
     </div>
-</body>
-</html>
+  </footer>
+
+</body></html>
